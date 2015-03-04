@@ -413,6 +413,7 @@ static void *KINContext = &KINContext;
     else if(self.uiWebView) {
         URLForActivityItem = self.uiWebView.request.URL;
     }
+    if (!URLForActivityItem) return;
     dispatch_async(dispatch_get_main_queue(), ^{
         TUSafariActivity *safariActivity = [[TUSafariActivity alloc] init];
         ARChromeActivity *chromeActivity = [[ARChromeActivity alloc] init];
